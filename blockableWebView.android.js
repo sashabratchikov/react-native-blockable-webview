@@ -10,21 +10,25 @@
  */
 'use strict';
 
-var EdgeInsetsPropType = require('EdgeInsetsPropType');
-var ActivityIndicator = require('ActivityIndicator');
-var RCTDeviceEventEmitter = require('RCTDeviceEventEmitter');
-var React = require('React');
-var ReactNative = require('react/lib/ReactNative');
-var ReactNativeViewAttributes = require('ReactNativeViewAttributes');
-var StyleSheet = require('StyleSheet');
-var UIManager = require('UIManager');
-var View = require('View');
+import React from 'react';
+import {
+  ActivityIndicator,
+  EdgeInsetsPropType,
+  StyleSheet,
+  UIManager,
+  NativeModules,
+  Text,
+  ScrollView,
+  View,
+  requireNativeComponent,
+} from 'react-native';
 
-var deprecatedPropType = require('deprecatedPropType');
+import deprecatedPropType from 'react-native/Libraries/Utilities/deprecatedPropType';
+import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
+import RCTDeviceEventEmitter from 'react-native/Libraries/EventEmitter/RCTDeviceEventEmitter';
+
+var ReactNative = require('react-native');
 var keyMirror = require('fbjs/lib/keyMirror');
-var merge = require('merge');
-var requireNativeComponent = require('requireNativeComponent');
-var resolveAssetSource = require('resolveAssetSource');
 
 var PropTypes = React.PropTypes;
 
